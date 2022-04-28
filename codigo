@@ -79,13 +79,13 @@ quadradao() {
         Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15), color: Colors.purple),
+                borderRadius: BorderRadius.circular(15), color: Colors.purple[200]),
             width: 80,
             height: 83,
           ),
           Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15), color: Colors.pink),
+                borderRadius: BorderRadius.circular(15), color: Colors.purple[300]),
             width: 80,
             height: 83,
           ),
@@ -93,13 +93,13 @@ quadradao() {
         Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15), color: Colors.orange),
+                borderRadius: BorderRadius.circular(15), color: Colors.purple[400]),
             width: 80,
             height: 83,
           ),
           Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15), color: Colors.blue),
+                borderRadius: BorderRadius.circular(15), color: Colors.purple[500]),
             width: 80,
             height: 83,
           ),
