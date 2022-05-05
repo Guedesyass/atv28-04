@@ -1,0 +1,184 @@
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+BoxDecoration myDecoration(String link, Color color, double radius) {
+  return BoxDecoration(
+      image: DecorationImage(image: NetworkImage(link)),
+      color: color,
+      borderRadius: BorderRadius.all(
+        Radius.circular(radius),
+      ));
+}
+
+Row quadradin () {
+  return Row (
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+  Container(
+      decoration: BoxDecoration(
+          image: const DecorationImage(
+              image: NetworkImage(
+                  'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/610/409/products/7312abe8-54ed-4ad3-b631-e60af1e80c59-1cedd9ba199559144e16285461598924-1024-1024.png')),
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.grey),
+      width: 65,
+      height: 67,
+    ),
+      Container(
+      decoration: BoxDecoration(
+          image: const DecorationImage(
+              image: NetworkImage(
+                  'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/610/409/products/7312abe8-54ed-4ad3-b631-e60af1e80c59-1cedd9ba199559144e16285461598924-1024-1024.png')),
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.grey),
+      width: 65,
+      height: 67,
+    ),
+      Container(
+      decoration: BoxDecoration(
+          image: const DecorationImage(
+              image: NetworkImage(
+                  'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/610/409/products/7312abe8-54ed-4ad3-b631-e60af1e80c59-1cedd9ba199559144e16285461598924-1024-1024.png')),
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.grey),
+      width: 65,
+      height: 67,
+    ),
+      Container(
+      decoration: BoxDecoration(
+          image: const DecorationImage(
+              image: NetworkImage(
+                  'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/610/409/products/7312abe8-54ed-4ad3-b631-e60af1e80c59-1cedd9ba199559144e16285461598924-1024-1024.png')),
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.grey),
+      width: 65,
+      height: 67,
+    ),
+      ]);
+}
+
+
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: MyWidget(),
+        ),
+      ),
+    );
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 500,
+        height: 700,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            border: Border.all(
+              width: 5,
+              color: Colors.black,
+            ),
+            color: Colors.white),
+        child: (Column(children: [
+          const SizedBox(height: 2),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [retangulo()]),
+          const SizedBox(height: 40),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [quadrado(), quadrado()]),
+          const SizedBox(height: 40),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [retangulo()]),
+          const SizedBox(height: 40),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [quadradin()]),
+          const SizedBox(height: 40),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [quadradao()]),
+        ])));
+  }
+}
+
+quadrado() {
+  return Container(
+    decoration: myDecoration(
+        'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/610/409/products/7312abe8-54ed-4ad3-b631-e60af1e80c59-1cedd9ba199559144e16285461598924-1024-1024.png',
+        Colors.grey,
+        10),
+    width: 65,
+    height: 67,
+  );
+}
+
+retangulo() {
+  return Container(
+    decoration: myDecoration(
+        'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/610/409/products/7312abe8-54ed-4ad3-b631-e60af1e80c59-1cedd9ba199559144e16285461598924-1024-1024.png',
+        Colors.grey,
+        10),
+    width: 280,
+    height: 70,
+  );
+}
+
+quadradao() {
+  return Container(
+      decoration: myDecoration(
+          'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/610/409/products/7312abe8-54ed-4ad3-b631-e60af1e80c59-1cedd9ba199559144e16285461598924-1024-1024.png',
+          Colors.grey,
+          10),
+      width: 300,
+      height: 250,
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15), color: Colors.pink),
+            width: 80,
+            height: 83,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15), color: Colors.yellow),
+            width: 80,
+            height: 83,
+          ),
+        ]),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15), color: Colors.pink),
+            width: 80,
+            height: 83,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15), color: Colors.yellow),
+            width: 80,
+            height: 83,
+          ),
+        ])
+      ]));
+}
